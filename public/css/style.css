@@ -1,0 +1,66 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Segoe UI, Arial, sans-serif; background: #f4f6f8; color: #222; }
+a { color: inherit; text-decoration: none; }
+
+.nav { display: flex; justify-content: space-between; align-items: center; background: #1f2937; color: #fff; padding: 14px 28px; position: sticky; top: 0; z-index: 10; }
+.brand { font-size: 22px; font-weight: 700; color: #fbbf24; }
+.nav nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.nav nav a, .nav nav button.link { color: #fff; background: none; border: none; font-size: 15px; cursor: pointer; }
+.nav nav a:hover, .nav nav button.link:hover { color: #fbbf24; }
+
+main { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+h2 { margin-bottom: 16px; }
+
+.toolbar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+input, select, textarea { padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 15px; width: 100%; font-family: inherit; }
+.toolbar input, .toolbar select { width: auto; flex: 1; min-width: 160px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+.card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); display: flex; flex-direction: column; }
+.card img { width: 100%; height: 160px; object-fit: cover; background: #e5e7eb; }
+.card .body { padding: 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card .cat { font-size: 12px; color: #6b7280; text-transform: uppercase; }
+.card .price { font-weight: 700; font-size: 18px; color: #059669; }
+.card .stock { font-size: 13px; color: #6b7280; }
+.card .stock.out { color: #dc2626; }
+.card button { margin-top: auto; }
+
+button, .btn { background: #2563eb; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; display: inline-block; text-align: center; }
+button:hover, .btn:hover { background: #1d4ed8; }
+button.secondary { background: #e5e7eb; color: #111; }
+button.secondary:hover { background: #d1d5db; }
+button.danger { background: #dc2626; }
+button.danger:hover { background: #b91c1c; }
+button:disabled { background: #9ca3af; cursor: not-allowed; }
+button.sm { padding: 5px 10px; font-size: 13px; }
+
+.panel { background: #fff; border-radius: 10px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,.08); margin-bottom: 20px; }
+.form-box { max-width: 420px; margin: 40px auto; }
+.form-box label, .panel label { display: block; margin: 12px 0 4px; font-size: 14px; font-weight: 600; }
+.form-box button { width: 100%; margin-top: 18px; }
+.muted { color: #6b7280; font-size: 14px; margin-top: 12px; text-align: center; }
+.muted a { color: #2563eb; }
+
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: 10px; text-align: left; border-bottom: 1px solid #e5e7eb; font-size: 14px; vertical-align: middle; }
+th { background: #f9fafb; }
+.table-wrap { overflow-x: auto; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); margin-bottom: 20px; }
+td input[type=number] { width: 70px; padding: 5px; }
+
+.badge { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; }
+.Pending { background: #f59e0b; } .Processing { background: #3b82f6; } .Shipped { background: #8b5cf6; }
+.Delivered { background: #10b981; } .Cancelled { background: #ef4444; }
+
+.row { display: flex; gap: 12px; flex-wrap: wrap; }
+.row > div { flex: 1; min-width: 180px; }
+.total { text-align: right; font-size: 20px; font-weight: 700; margin: 14px 0; }
+.order-box { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.08); margin-bottom: 16px; }
+.order-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.tabs { display: flex; gap: 8px; margin-bottom: 18px; }
+.tabs button { background: #e5e7eb; color: #111; }
+.tabs button.active { background: #2563eb; color: #fff; }
+.empty { text-align: center; color: #6b7280; padding: 40px 0; }
+
+.toast { position: fixed; bottom: 24px; right: 24px; background: #111827; color: #fff; padding: 12px 20px; border-radius: 8px; opacity: 0; transition: opacity .3s; pointer-events: none; }
+.toast.show { opacity: 1; }
+.toast.error { background: #dc2626; }
